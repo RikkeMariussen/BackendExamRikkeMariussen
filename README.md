@@ -36,6 +36,9 @@ DB_NAME=exam_rikke_mariussen
 DB_USERNAME=<username>
 DB_PASSWORD=<password>
 
+Link til github:
+https://github.com/RikkeMariussen/BackendExamRikkeMariussen
+
 **Task 2: JPA and DAOs**
 2.2 Implement a SkiLesson entity class with the following properties: starttime, endtime, location (latitude,
 longitude), name, price, id, level. Use an enum for the level of the ski lesson.
