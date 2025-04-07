@@ -1,0 +1,48 @@
+### Get all skilessons
+GET http://localhost:7070/api/skilessons
+
+### Get skilesson by id
+GET http://localhost:7070/api/skilessons/1
+
+### Create a new skilesson (no instructor)
+POST http://localhost:7070/api/skilessons
+Content-Type: application/json
+
+{
+  "name": "Aftenhold",
+  "level": "ADVANCED",
+  "longitude": 5.32800000,
+  "latitude" : 60.39200000,
+  "startTime": "2025-04-20T19:30:00.000",
+  "endTime": "2025-04-20T22:30:00.000",
+  "price": 199.99
+}
+
+### Update a skilesson (ændr {id} for an exsisting ID)
+PUT http://localhost:7070/api/skilessons/10
+Content-Type: application/json
+
+{
+  "name": "Nathold",
+  "level": "ADVANCED",
+  "longitude": 5.32800000,
+  "latitude" : 60.39200000,
+  "startTime": "2025-04-20T20:00:00.000",
+  "endTime": "2025-04-20T22:30:00.000",
+  "price": 199.99
+}
+
+### Delete a skilesson
+DELETE http://localhost:7070/api/skilessons/10
+
+### Add instructor to skilesson (PUT = update existing skilesson)
+PUT http://localhost:7070/api/skilessons/6/instructors/1
+
+### Populate database
+POST http://localhost:7070/api/skilessons/populate
+
+### Filter by level
+GET http://localhost:7070/api/skilessons/filter/beginner
+
+### Get total lesson prices by instructors
+GET http://localhost:7070/api/skilessons/instructors/totalprice
