@@ -2,8 +2,8 @@ package dat.utils;
 
 import dat.entities.*;
 import dat.enums.Level;
-import dat.security.entities.User;
-import dat.security.entities.Role;
+//import dat.security.entities.User;
+//import dat.security.entities.Role;
 import dk.bugelhartmann.UserDTO;
 import jakarta.persistence.EntityManagerFactory;
 
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Populator {
     //Den her tager sig af brugere (security)
-    public static UserDTO[] populateUsers(EntityManagerFactory emf) {
+   /* public static UserDTO[] populateUsers(EntityManagerFactory emf) {
         User user, admin;
         Role userRole, adminRole;
 
@@ -37,7 +37,7 @@ public class Populator {
         UserDTO userDTO = new UserDTO(user.getUsername(), "user123");
         UserDTO adminDTO = new UserDTO(admin.getUsername(), "admin123");
         return new UserDTO[]{userDTO, adminDTO};
-    }
+    }*/
 
     //2.5 Populator
     public static List<Instructor> populateInstructors() {

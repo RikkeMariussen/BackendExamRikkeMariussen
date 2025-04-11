@@ -7,6 +7,8 @@ GET http://localhost:7070/api/skilessons/1
 ### Create a new skilesson (no instructor)
 POST http://localhost:7070/api/skilessons
 Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
 
 {
   "name": "Aftenhold",
@@ -21,6 +23,7 @@ Content-Type: application/json
 ### Update a skilesson (ændr {id} for an exsisting ID)
 PUT http://localhost:7070/api/skilessons/10
 Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
 
 {
   "name": "Nathold",
@@ -34,15 +37,20 @@ Content-Type: application/json
 
 ### Delete a skilesson
 DELETE http://localhost:7070/api/skilessons/10
+Authorization: Bearer {{jwt_token}}
 
 ### Add instructor to skilesson (PUT = update existing skilesson)
 PUT http://localhost:7070/api/skilessons/6/instructors/1
+Authorization: Bearer {{jwt_token}}
 
 ### Populate database
 POST http://localhost:7070/api/skilessons/populate
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
 
 ### Filter by level
 GET http://localhost:7070/api/skilessons/filter/beginner
 
 ### Get total lesson prices by instructors
 GET http://localhost:7070/api/skilessons/instructors/totalprice
+Authorization: Bearer {{jwt_token}}
